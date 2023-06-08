@@ -1,0 +1,17 @@
+{
+    "propeties" : [
+        {
+            "id": "", 
+        "Address": "",
+        "description": "",
+        "category": "",
+        "bedrooms": "",
+        "bathrooms": "",
+        "garages": "",
+        "size": "",
+        "price": "",
+        "perMonth": "",
+        "imageLink": ""
+        }
+    ]
+}

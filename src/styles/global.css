@@ -53,3 +53,45 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  :root{
+    --primary-color: #248232;
+    --secondary-color: #2BA84A;
+    --tertiary-color: #2D3A3A;
+    --white-hue: #FCFFFC;
+    --black-hue: #040F0F;
+  }
+
+  .links > ul > li > a{
+    text-decoration: none;
+    color: var(--white-hue);
+    padding: 5px;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: 0.4s;
+  }
+
+  .links > ul > li > a:hover{
+    background-color: var(--white-hue);
+    color: var(--secondary-color);
+  }
+
+  nav{
+    background-color: var(--secondary-color);
+  }
+  
+  .checkoutBtn{
+    background-color: var(--white-hue);
+    color: var(--secondary-color);
+    transition: 0.4s;
+  }
+ 
+  .checkoutBtn:hover{
+    scale: 1.4;
+    background-color: transparent;
+    color: var(--white-hue);
+    filter: drop-shadow(-4px 5px 10px #000);
+  }
+
+  
+  
