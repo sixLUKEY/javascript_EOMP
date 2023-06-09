@@ -18,6 +18,7 @@
   */
   html, body {
     height: 100%;
+    background-color: var(--white-hue) !important;
   }
   /*
     Typographic tweaks!
@@ -55,16 +56,18 @@
   }
 
   :root{
-    --primary-color: #248232;
-    --secondary-color: #2BA84A;
-    --tertiary-color: #2D3A3A;
-    --white-hue: #FCFFFC;
-    --black-hue: #040F0F;
+    --primary-color: #006992;
+    --secondary-color: #ECA400;
+    --secondary-color-contrast: #f6cd6f;
+    --tertiary-color: #27476E;
+    --white-hue: #E4E4E4;
+    --black-hue: #000000;
   }
+  
 
   .links > ul > li > a{
     text-decoration: none;
-    color: var(--white-hue);
+    color: white;
     padding: 5px;
     border-radius: 3px;
     background-color: transparent;
@@ -72,7 +75,7 @@
   }
 
   .links > ul > li > a:hover{
-    background-color: var(--white-hue);
+    background-color: white;
     color: var(--secondary-color);
   }
 
@@ -81,7 +84,7 @@
   }
   
   .checkoutBtn{
-    background-color: var(--white-hue);
+    background-color: white;
     color: var(--secondary-color);
     transition: 0.4s;
   }
@@ -89,9 +92,30 @@
   .checkoutBtn:hover{
     scale: 1.4;
     background-color: transparent;
-    color: var(--white-hue);
+    color: white;
     filter: drop-shadow(-4px 5px 10px #000);
   }
 
+  .checkoutBtn:active{
+    color: black;
+  }
+
+
+  footer{
+    background-color: var(--tertiary-color);
+
+  }
+
+  .copyright{
+    color: var(--secondary-color-contrast);
+  }
+
+
+  @media screen and (max-width: 400px) {
+    nav{
+      font-size: 0.75rem;
+    }
+  }
+  
   
   
