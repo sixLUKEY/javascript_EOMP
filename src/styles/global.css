@@ -156,6 +156,9 @@
     height: 20rem;
 }
 
+.modal-title{
+  font-weight: bold;
+}
 
 .modal-dialog{
   position: fixed;
