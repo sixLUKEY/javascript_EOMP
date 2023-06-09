@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /* ! JOSH W COMEAU RESET */
 
 
@@ -19,7 +21,12 @@
   html, body {
     height: 100%;
     background-color: var(--white-hue) !important;
+    font-family: 'Poppins', sans-serif !important;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
   /*
     Typographic tweaks!
     4. Add accessible line-height
@@ -28,6 +35,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    
   }
   /*
     6. Improve media defaults
@@ -110,6 +118,74 @@
     color: var(--secondary-color-contrast);
   }
 
+  .closeCart{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+.closeCart:hover{
+  scale: 1.2;
+  background-color: transparent;
+  color: white;
+  filter: drop-shadow(-3px 5px 6px #9d9d9d);
+}
+
+.closeCart:active{
+  color: rgb(156, 156, 156);
+}
+
+.CheckoutCart{
+    background-color: var(--secondary-color);
+    color: black;
+    transition: 0.4s;
+}
+
+.CheckoutCart:hover{
+    scale: 1.2;
+    background-color: transparent;
+    color: var(--secondary-color);
+    filter: drop-shadow(-3px 5px 6px #9d9d9d);
+}
+
+.CheckoutCart:active{
+  color: var(--secondary-color-contrast);
+}
+
+.filler{
+    height: 20rem;
+}
+
+
+.modal-dialog{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  max-width: 100% !important;
+}
+
+.modal-content{
+  transform: translateX(100%);
+  animation: fadeIn 0.2s linear forwards;
+  width: 80vw;
+  max-width: 600px;
+  inset: 0;
+  margin: 0px !important;
+}
+
+
+
+@keyframes fadeIn {
+  0%{
+    transform: translateX(100%);
+    scale: 0.8;
+  }
+  100%{
+    transform: translateX(0);
+    scale: 1;
+  }
+}
 
   @media screen and (max-width: 400px) {
     nav{

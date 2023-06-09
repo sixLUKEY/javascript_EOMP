@@ -10,7 +10,7 @@
   .heroContainer{
     background-color: var(--primary-color);
     height: 20rem;
-    width: 90%;
+    width: 95%;
     position: relative;
   }
 
@@ -33,7 +33,7 @@
 
   .featured{
     background-color: var(--primary-color);
-    width: 90%;
+    width: 95%;
     justify-content: center;
   }
 
@@ -46,7 +46,7 @@
 
   .brands{
     background-color: var(--black-hue);
-    width: 90%;
+    width: 95%;
     justify-content: center;
   }
 
@@ -60,7 +60,7 @@
   .form{
     color: var(--secondary-color-contrast);
     width: 90%;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .submitButton{
@@ -80,4 +80,23 @@
   .submitButton:active{
     background-color: #2a2a2a;
     color: white;
+  }
+
+  
+
+  .modal-dialog{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    max-width: 100% !important;
+  }
+  
+  .modal-content{
+    transform: translateX(100%);
+    animation: fadeIn 0.2s linear forwards;
+    width: 80vw;
+    max-width: 600px;
+    inset: 0;
+    margin: 0px !important;
   }
