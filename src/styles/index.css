@@ -81,6 +81,10 @@
     font-size: 1rem;
   }
 
+  #nameInput, #lastnameInput{
+    width: 100%;
+  }
+
   .submitButton{
     background-color: black;
     font-weight: bold;
