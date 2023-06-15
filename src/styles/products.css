@@ -1,0 +1,29 @@
+:root{
+    --primary-color: #006992;
+    --secondary-color: #ECA400;
+    --secondary-color-contrast: #f6cd6f;
+    --tertiary-color: #27476E;
+    --white-hue: #E4E4E4;
+    --black-hue: #000000;
+    }
+
+
+.productContainer{
+    width: clamp(95vw, 95vw, 95vw);
+    background-color: var(--primary-color);
+}
+
+.productBox{
+    width: 30%;
+    height: 15rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .productBox{
+        width: 45%;
+    }
+  }
+
