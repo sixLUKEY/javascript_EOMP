@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/admin.css" />
+    <title>Admin Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/src/styles/index.css" />
-    <title>sixLUKEY.prop</title>
   </head>
   <body>
     <nav
@@ -98,106 +98,143 @@
       <div class="links">
         <ul class="list-unstyled d-flex gap-1 m-0 fw-bold gap-md-5">
           <li>
-            <a class="px-md-3" href="#"> Home </a>
+            <a class="px-md-3" href="/index.html"> Home </a>
           </li>
           <li>
             <a class="px-md-3" href="/src/pages/products.html"> Products </a>
           </li>
           <li>
-            <a class="px-md-3" href="/src/pages/admin.html"> Admin </a>
+            <a class="px-md-3" href="#"> Admin </a>
           </li>
         </ul>
       </div>
-      <div class="checkout">
-        <button class="border-0 rounded-1 p-2 fw-bold checkoutBtn" data-bs-toggle="modal" data-bs-target="#cartModal" type="button">
-          <i class="fa-solid fa-cart-shopping fa-xl"></i>
-        </button>
-      </div>
     </nav>
 
-    <div class="modal fadeIn" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content bg-black">
-            <div class="modal-header border-0">
-              <h1 class="modal-title fs-5 text-white" id="cartModalLabel">Your Cart</h1>
-              <button type="button" class="p-1 px-2 rounded-3 closeCart border-0" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-xl"></i></button>
-            </div>
-            <div class="modal-body">
-              <div class="filler"></div>
-            </div>
-            <div class="modal-footer border-0 gap-4">
-              <button type="button" class="closeCart border-0 p-2 rounded-2 fw-bold" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="CheckoutCart border-0 p-2 rounded-2 fw-bold">Checkout</button>
+    <main>
+      <section>
+        <h1 class="text-white text-center py-4">Add Products</h1>
+
+        <div
+          class="selectionArea text-white d-flex flex-column align-items-center"
+        >
+          <div class="productBrand">
+            <p>Product Brand</p>
+            <select name="selector" id="brandSelector">
+              <option value="nike">Nike</option>
+              <option value="adidas">Adidas</option>
+              <option value="puma">Puma</option>
+              <option value="vans">Vans</option>
+              <option value="converse">Converse</option>
+              <option value="jordan">Jordan</option>
+            </select>
+          </div>
+          <div class="productName">
+            <p>Product Name</p>
+            <input type="text" name="adder" id="productName" />
+          </div>
+          <div class="productDesc">
+            <p>Product Description</p>
+            <input type="text" name="adder" id="productDesk" />
+          </div>
+          <div class="gender">
+            <p>Gender</p>
+            <select name="selector" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="size">
+            <p>Shoe Size</p>
+            <input type="number" name="size" id="size" max="14" min="1" />
+          </div>
+          <div class="shoeColors">
+            <p class="text-center">Available Colors</p>
+            <div class="colors d-flex gap-2">
+              <input type="color" name="colorSelector" id="color1" />
+              <input type="color" name="colorSelector" id="color2" />
+              <input type="color" name="colorSelector" id="color3" />
             </div>
           </div>
+          <div class="productPricea">
+            <p>Product Price</p>
+            <input type="number" name="adder" id="productPrice" />
+          </div>
+          <div class="productQuantity">
+            <p>Product Quantity</p>
+            <input type="number" name="adder" id="productQuantity" />
+          </div>
+          <div class="productImage">
+            <p>Product Image Link</p>
+            <input type="url" name="adder" id="productImage" />
+          </div>
+        </div>
+
+        <div class="displayProduct"></div>
+      </section>
+      <section>
+        <h1 class="text-center my-4 text-white">Edit Products</h1>
+        <div
+          class="selectionArea text-white d-flex flex-column align-items-center"
+        >
+        <div class="productBrand">
+          <p>
+            Product Brand
+          </p>
+          <select name="editor" id="brandEdit">
+            <option value="nike">Nike</option>
+            <option value="adidas">Adidas</option>
+            <option value="puma">Puma</option>
+            <option value="vans">Vans</option>
+            <option value="converse">Converse</option>
+            <option value="jordan">Jordan</option>
+          </select>
+        </div>
+        <div class="editByGender">
+          <p>
+            Gender
+          </p>
+          <select name="editor" id="genderEdit">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="editByName">
+          <p>
+            Product Name
+          </p>
+          <select name="editor" id="nameEdit">
+            <option value="productName"></option>
+          </select>
+        </div>
+        <div class="editorInputs">
+          <p>
+            Value to edit
+          </p>
+          <select name="editor" id="valueEdit">
+            <option value="productDescription">Description</option>
+            <option value="shoeSize">Size</option>
+            <option value="shoeColors">Colors</option>
+            <option value="shoePrice">Price</option>
+            <option value="shoeQuantity">Quantity</option>
+            <option value="imageLink">Image Link</option>
+          </select>
         </div>
       </div>
+      <div class="displayProdct">
 
-    <main id="main">
-        <div class="container-fluid heroContainer my-4 rounded-3 overflow-hidden">
-          <div class="skewBanner">
-
-          </div>
-          <div class="heroTextBox rounded-3">
-
-          </div>
-        </div>
-
-        <div class="container-fluid featured row row-cols-2 mx-auto rounded-3 gap-3 p-3 my-4">
-          <div class="featuredProduct"></div>
-          <div class="featuredProduct"></div>
-          <div class="featuredProduct"></div>
-          <div class="featuredProduct"></div>
-        </div>
-
-        <div class="brands row row-cols-3 mx-auto gap-3 rounded-3 p-3 mb-4">
-          <div class="brand"></div>
-          <div class="brand"></div>
-          <div class="brand"></div>
-          <div class="brand"></div>
-          <div class="brand"></div>
-          <div class="brand"></div>
-        </div>
+      </div>
+      </section>
     </main>
 
-    <footer class="py-3">
-      <form action="" class="form mx-auto">
-        <div class="mb-3 d-flex justify-content-between gap-4">
-          <div>
-            <label for="nameInput" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="e.g. John">
-          </div>
-          <div>
-            <label for="LastnameInput" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="LastnameInput" placeholder="e.g. Doe">
-          </div>
-        </div>
-        
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Leave a message!</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="btnDiv d-flex">
-        <button type="submit" class="submitButton rounded-1 border-0 p-1 px-3">Submit</button>
-        </div>
-      </form>
-
-      <p class="copyright text-center mt-4">Copyright &copy; 2023
-        <br>
-        Designed and Curated by Luke Evertson
-      </p>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/83253cadc3.js" crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/javascript/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/83253cadc3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/javascript/products.js"></script>
   </body>
 </html>

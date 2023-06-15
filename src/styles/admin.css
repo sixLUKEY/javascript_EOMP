@@ -1,0 +1,7 @@
+main{
+    background: black !important; 
+}
+
+.selectionArea div{
+    margin-block: 10px;
+}
