@@ -123,112 +123,27 @@
               <button type="button" class="p-1 px-2 rounded-3 closeCart border-0" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-xl"></i></button>
             </div>
             <div class="modal-body" id="cartBox">
-              <!-- <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity"></div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity">0</div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity"></div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+              
             </div>
             <div class="modal-footer border-0 gap-4">
+              <div class="subtotal text-white">Subtotal &nbsp; R &nbsp;<span id="subtotal"></span></div>
               <button type="button" class="closeCart border-0 p-2 rounded-2 fw-bold" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="CheckoutCart border-0 p-2 rounded-2 fw-bold">Checkout</button>
+              <button type="button" class="CheckoutCart border-0 p-2 rounded-2 fw-bold" id="checkoutBtn">Checkout</button>
             </div>
           </div>
         </div>
       </div>
 
     <main>
+      <div class="filters d-flex gap-3 flex-wrap">
+        Add a filter : <select name="filter" id="filterSelect">
+          <option value="price">Price</option>
+          <option value="brand">Brand</option>
+        </select>
+        <input type="text" placeholder="Max value or Brand Name" id="filterAmount">
+        <button id="filterBtn">Filter</button>
+      </div>
+      <div class="filterOutput" id="filterOutput"></div>
         <section class="mens">
             <h1 class="text-center my-3 fw-bold">
                 Mens
@@ -262,5 +177,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/src/javascript/products.js"></script>
+    <script src="/src/javascript/cart.js"></script>
   </body>
 </html>
