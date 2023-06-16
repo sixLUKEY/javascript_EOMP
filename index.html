@@ -120,140 +120,20 @@
       </div>
     </nav>
 
-    <div
-      class="modal fadeIn"
-      id="cartModal"
-      tabindex="-1"
-      aria-labelledby="cartModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fadeIn" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content bg-black">
           <div class="modal-header border-0">
-            <h1 class="modal-title fs-5 text-white" id="cartModalLabel">
-              Your Cart
-            </h1>
-            <button
-              type="button"
-              class="p-1 px-2 rounded-3 closeCart border-0"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="fa-solid fa-xmark fa-xl"></i>
-            </button>
+            <h1 class="modal-title fs-5 text-white" id="cartModalLabel">Your Cart</h1>
+            <button type="button" class="p-1 px-2 rounded-3 closeCart border-0" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark fa-xl"></i></button>
           </div>
-          <div class="modal-body">
-            <!-- <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity"></div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity">0</div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cartItem">
-                <div class="cartImage">
-                  <img src="/public/air-jordan-1-university-blue-release-date-cutout.png" alt="">
-                </div>
-              <div class="cartDetails">
-                <div class="cartName">
-                  <p>
-                    Nike Air Jordan 1
-                    <br>
-                    University Blue
-                  </p>
-                  <p>
-                    Size: 8
-                  </p>
-                </div>
-                <div class="cartQuantity">
-                  <div class="cartColorBlock">
-                    <div class="innerColorBlock">
-
-                    </div>
-                  </div>
-                  <div class="itemPrice">
-                    R 2599
-                  </div>
-                  <div class="itemQuantity">
-                    <button>-</button>
-                    <div class="quantity"></div>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+          <div class="modal-body" id="cartBox">
+            
           </div>
           <div class="modal-footer border-0 gap-4">
-            <button
-              type="button"
-              class="closeCart border-0 p-2 rounded-2 fw-bold"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              class="CheckoutCart border-0 p-2 rounded-2 fw-bold"
-            >
-              Checkout
-            </button>
+            <div class="subtotal text-white">Subtotal &nbsp; R &nbsp;<span id="subtotal"></span></div>
+            <button type="button" class="closeCart border-0 p-2 rounded-2 fw-bold" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="CheckoutCart border-0 p-2 rounded-2 fw-bold" id="checkoutBtn">Checkout</button>
           </div>
         </div>
       </div>
@@ -311,7 +191,8 @@
     </main>
 
     <footer class="py-3">
-      <form action="" class="form mx-auto">
+      <form action="https://formspree.io/f/xwkjgqpp"
+      method="POST" class="form mx-auto">
         <div class="mb-3 d-flex justify-content-between gap-4">
           <div class="w-50">
             <label for="nameInput" class="form-label">First Name</label>
@@ -320,6 +201,7 @@
               class="form-control"
               id="nameInput"
               placeholder="e.g. John"
+              name="name"
             />
           </div>
           <div class="w-50">
@@ -329,6 +211,7 @@
               class="form-control"
               id="lastnameInput"
               placeholder="e.g. Doe"
+              name="lastName"
             />
           </div>
         </div>
@@ -342,6 +225,7 @@
             class="form-control"
             id="exampleFormControlInput1"
             placeholder="name@example.com"
+            name="email"
           />
         </div>
         <div class="mb-3">
@@ -352,12 +236,15 @@
             class="form-control"
             id="exampleFormControlTextarea1"
             rows="3"
+            name="message"
           ></textarea>
         </div>
         <div class="btnDiv d-flex">
           <button
             type="submit"
             class="submitButton rounded-1 border-0 p-1 px-3"
+            id="submit"
+            >
           >
             Submit
           </button>
@@ -380,6 +267,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/javascript/products.js"></script>
+    <script src="/src/javascript/index.js"></script>
+    <script src="/src/javascript/cart.js"></script>
   </body>
 </html>

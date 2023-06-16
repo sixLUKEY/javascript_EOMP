@@ -120,12 +120,35 @@
           <div class="productBrand">
             <p>Product Brand</p>
             <select name="selector" id="brandSelector">
-              <option value="nike">Nike</option>
-              <option value="adidas">Adidas</option>
-              <option value="puma">Puma</option>
-              <option value="vans">Vans</option>
-              <option value="converse">Converse</option>
-              <option value="jordan">Jordan</option>
+              <option value="Nike">Nike</option>
+              <option value="Adidas">Adidas</option>
+              <option value="Puma">Puma</option>
+              <option value="Vans">Vans</option>
+              <option value="Converse">Converse</option>
+              <option value="Jordan">Jordan</option>
+            </select>
+          </div>
+          <div class="productLogo">
+            <p>Product Logo</p>
+            <select name="selector" id="logoSelector">
+              <option value="https://i.postimg.cc/W1nvZgNv/nikeLogo.png">
+                Nike
+              </option>
+              <option value="https://i.postimg.cc/F15PWWxB/adidas-Logo.png">
+                Adidas
+              </option>
+              <option value="https://i.postimg.cc/zDb8QyjC/pumaLogo.png">
+                Puma
+              </option>
+              <option value="https://i.postimg.cc/0jDgyJWh/vansLogo.png">
+                Vans
+              </option>
+              <option value="https://i.postimg.cc/qBP4Hpb9/converse-Logo.png">
+                Converse
+              </option>
+              <option value="https://i.postimg.cc/BQ2sqRRt/jordan-Logo.png">
+                Jordan
+              </option>
             </select>
           </div>
           <div class="productName">
@@ -134,25 +157,23 @@
           </div>
           <div class="productDesc">
             <p>Product Description</p>
-            <input type="text" name="adder" id="productDesk" />
+            <input type="text" name="adder" id="productDesc" />
           </div>
           <div class="gender">
             <p>Gender</p>
             <select name="selector" id="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
           <div class="size">
             <p>Shoe Size</p>
             <input type="number" name="size" id="size" max="14" min="1" />
           </div>
-          <div class="shoeColors">
+          <div class="shoeColor">
             <p class="text-center">Available Colors</p>
-            <div class="colors d-flex gap-2">
-              <input type="color" name="colorSelector" id="color1" />
-              <input type="color" name="colorSelector" id="color2" />
-              <input type="color" name="colorSelector" id="color3" />
+            <div class="colors">
+              <input type="color" name="colorSelector" id="color" />
             </div>
           </div>
           <div class="productPricea">
@@ -167,62 +188,59 @@
             <p>Product Image Link</p>
             <input type="url" name="adder" id="productImage" />
           </div>
+          <div class="productFeatured">
+            <p>Featured Product?</p>
+            <select name="selector" id="productFeatured">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <button class="previewButton" onclick="createProduct()">Preview Product</button>
         </div>
 
-        <div class="displayProduct"></div>
+        <div class="previewProduct" id="previewProduct"></div>
       </section>
       <section>
         <h1 class="text-center my-4 text-white">Edit Products</h1>
         <div
           class="selectionArea text-white d-flex flex-column align-items-center"
         >
-        <div class="productBrand">
-          <p>
-            Product Brand
-          </p>
-          <select name="editor" id="brandEdit">
-            <option value="nike">Nike</option>
-            <option value="adidas">Adidas</option>
-            <option value="puma">Puma</option>
-            <option value="vans">Vans</option>
-            <option value="converse">Converse</option>
-            <option value="jordan">Jordan</option>
-          </select>
+          <div class="productBrand">
+            <p>Product Brand</p>
+            <select name="editor" id="brandEdit">
+              <option value="Nike">Nike</option>
+              <option value="Adidas">Adidas</option>
+              <option value="Puma">Puma</option>
+              <option value="Vans">Vans</option>
+              <option value="Converse">Converse</option>
+              <option value="Jordan">Jordan</option>
+            </select>
+          </div>
+          <div class="editByGender">
+            <p>Gender</p>
+            <select name="editor" id="genderEdit">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="editByName">
+            <p>Product Name</p>
+            <select name="editor" id="nameEdit">
+              <option value="productName"></option>
+            </select>
+          </div>
+          <div class="editorInputs">
+            <p>Value to edit</p>
+            <select name="editor" id="valueEdit">
+              <option value="productDescription">Description</option>
+              <option value="shoeSize">Size</option>
+              <option value="shoeColors">Colors</option>
+              <option value="shoePrice">Price</option>
+              <option value="shoeQuantity">Quantity</option>
+              <option value="imageLink">Image Link</option>
+            </select>
+          </div>
         </div>
-        <div class="editByGender">
-          <p>
-            Gender
-          </p>
-          <select name="editor" id="genderEdit">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
-        <div class="editByName">
-          <p>
-            Product Name
-          </p>
-          <select name="editor" id="nameEdit">
-            <option value="productName"></option>
-          </select>
-        </div>
-        <div class="editorInputs">
-          <p>
-            Value to edit
-          </p>
-          <select name="editor" id="valueEdit">
-            <option value="productDescription">Description</option>
-            <option value="shoeSize">Size</option>
-            <option value="shoeColors">Colors</option>
-            <option value="shoePrice">Price</option>
-            <option value="shoeQuantity">Quantity</option>
-            <option value="imageLink">Image Link</option>
-          </select>
-        </div>
-      </div>
-      <div class="displayProdct">
-
-      </div>
       </section>
     </main>
 
@@ -235,6 +253,6 @@
       src="https://kit.fontawesome.com/83253cadc3.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/javascript/products.js"></script>
+    <script src="/src/javascript/admin.js"></script>
   </body>
 </html>

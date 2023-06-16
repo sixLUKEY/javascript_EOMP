@@ -309,4 +309,142 @@
     }
   }
 
+  .previewProduct{
+    width: 30%;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 0;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .productBox{
+        width: 45%;
+    }
+  }
+
+.productCard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+
+}
+
+.cardHead{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.logoImg{
+    width: 80px;
+}
+
+.cardImg{
+    width: 90%;
+    transition: 0.4s;
+}
+
+.cardPrice{
+    font-weight: bold;
+}
+
+.addBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardColorBox{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+
+}
+
+.cardColorInner{
+    width: 80%;
+    height: 80%;
+    background-color: #006992;
+    border-radius: 999px;
+}
+
+.cardDetails{
+  text-align: center;
+}
+
+.cardSizes{
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+
+.cardName{
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.cardDesc{
+  font-weight: 500;
+}
   
+.pushButton{
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(225, 54, 54);
+  color: white;
+  padding: 5px 20px;
+  transition: 0.2s;
+}
+
+.pushButton:hover{
+  background-color: red;
+  scale: 1.1;
+}
+
+.pushButton:active{
+  background-color: rgb(94, 64, 64);
+}
+
+.previewButton{
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 20px;
+  transition: 0.2s;
+}
+
+.previewButton:hover{
+  background-color: #e98624;
+}
+
+#subtotal{
+  color: black;
+  padding: 5px;
+  background-color: var(--secondary-color);
+}
+
+.remove{
+  background-color: transparent;
+  border: 0;
+  font-size: 1.25rem;
+}
