@@ -191,6 +191,15 @@
     }
   }
 
+  @media screen and (min-width:1000px) {
+    .featuredProduct{
+      min-height: 400px;
+    }
+    .heroContainer{
+      height: 25rem !important;
+    }
+  }
+
   @media screen and (min-width: 768px) {
       .heroContainer{
         background-color: var(--secondary-color);
@@ -215,7 +224,13 @@
         white-space: wrap;
       }
       .shoeBox{
-        display: none;
+        position: absolute;
+        transform: translateX(50%);
+        height: 100%;
+        width: 150%;
+      }
+      .shadow{
+        background-color: black;
       }
   }
 
